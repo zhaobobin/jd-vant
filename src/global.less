@@ -1,0 +1,34 @@
+// @import "~vant/lib/index.less";
+
+// @nav-bar-height: 46px;
+// @nav-bar-background-color: red;
+// @nav-bar-title-font-size: 18;
+// @nav-bar-title-text-color: #fff;
+
+@base-bgColor: #F8F8F8;
+
+body {
+  color: #363A44;
+  background: #F1F2F3;
+  font-size: 16px;
+}
+
+a {
+  color: #428FFC;
+}
+
+.loan-go-enter-active, 
+.loan-go-leave-active, 
+.loan-back-enter-active, 
+.loan-back-leave-active {
+  transition: all 0.5s;
+}
+.loan-go-enter, .loan-back-leave-to{
+  position: fixed;
+  transform: translateX(100%);
+}
+.loan-back-enter, .loan-go-leave-to{
+  position: fixed;
+  transform: translateX(-100%);
+}
+
