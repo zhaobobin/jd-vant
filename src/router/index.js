@@ -5,6 +5,7 @@ import Home from '../views/home/index.vue';
 import Demand from '../views/demand/index.vue';
 import Account from '../views/account/index.vue';
 import ManageCenter from '../views/account/manage-center.vue';
+import CperatorManage from '../views/account/cperator-manage.vue';
 import MyCert from '../views/account/my-cert.vue';
 
 import DemoList from '../views/demand/DemoList';
@@ -36,6 +37,7 @@ const routes = [
     meta: { isShowTabBar: true },
   },
   { path: '/account/manage', name: 'ManageCenter', component: ManageCenter },
+  { path: '/account/manage/cperator', name: 'CperatorManage', component: CperatorManage },
   { path: '/account/cert', name: 'MyCert', component: MyCert },
 
   { path: '*', name: 'NotFound', component: NotFound },

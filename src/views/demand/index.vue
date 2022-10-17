@@ -29,7 +29,6 @@ export default {
 <style lang="less">
 .demand {
   width: auto;
-  height: 100vh;
 }
 .button {
   margin-top: 20px;

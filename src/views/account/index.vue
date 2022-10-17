@@ -87,7 +87,6 @@ export default {
 <style lang="less">
 .account {
   width: auto;
-  height: 100vh;
 
   .header {
     display: flex;
