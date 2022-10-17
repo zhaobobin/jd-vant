@@ -9,6 +9,7 @@ import CperatorManage from '../views/account/cperator-manage.vue';
 import MyCert from '../views/account/my-cert.vue';
 
 import DemoList from '../views/demand/DemoList';
+import NewsDetail from '../views/other/news-detail';
 import NotFound from '../views/root/NotFound.vue';
 
 Vue.use(VueRouter);
@@ -39,6 +40,7 @@ const routes = [
   { path: '/account/manage', name: 'ManageCenter', component: ManageCenter },
   { path: '/account/manage/cperator', name: 'CperatorManage', component: CperatorManage },
   { path: '/account/cert', name: 'MyCert', component: MyCert },
+  { path: '/news-detail', name: 'NewsDetail', component: NewsDetail },
 
   { path: '*', name: 'NotFound', component: NotFound },
 ];
