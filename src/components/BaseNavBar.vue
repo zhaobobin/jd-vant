@@ -42,7 +42,6 @@ export default {
   },
   methods: {
     onClickLeft() {
-      // console.log("点击返回按钮");
       this.$router.go(-1);
     },
     onClickRight() {

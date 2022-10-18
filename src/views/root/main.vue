@@ -1,31 +1,25 @@
 <template>
-  <div class="bg">
-    <BaseNavBar :title="title" :isBack="isBack" :isPlaceholder="true">
-      <!-- <van-icon name="cross" size="18" slot="left" />
-      <van-icon name="circle" size="18" slot="right" /> -->
-    </BaseNavBar>
-    <router-view></router-view>
-    <!-- <transition :name="isGoNext">
+  <div class="root">
+    <transition :name="isGoNext">
       <router-view></router-view>
-    </transition> -->
+    </transition>
     <BaseTabBar
       :selected="selected"
       :tabBars="tabBars"
       @onChange="onChange"
-    ></BaseTabBar>
+    />
   </div>
 </template>
 
 <script>
-import BaseNavBar from "@/components/BaseNavBar.vue";
 import BaseTabBar from "@/components/BaseTabBar.vue";
 export default {
   components: {
-    BaseNavBar,
     BaseTabBar,
   },
   data() {
     return {
+      viewMeta : 0,
       isGoNext : 'loan-go',
       title: "标题",
       isBack: false,
@@ -59,6 +53,22 @@ export default {
       ],
     };
   },
+  watch: {
+    '$route.matched': function (newVal, oldVal) {
+      const newMeta = newVal[0].meta.viewMeta;
+      const oldMeta = oldVal[0].meta.viewMeta;
+      this.viewMeta = newMeta;
+      if (newMeta === oldMeta) {
+        this.isGoNext = '';
+      } else {
+        this.isGoNext = newMeta > oldMeta ? 'loan-go' : 'loan-back';
+        
+      }
+    }
+  },
+  mounted(){
+    this.viewMeta = 1
+  },
   methods: {
     onChange(index) {
       // console.log("外部-切换到tabbar：" + index);
@@ -71,4 +81,11 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="less">
+.root {
+  height: 100vh;
+  .container {
+    padding-top: 46px;
+  }
+}
+</style>

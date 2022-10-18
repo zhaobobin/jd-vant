@@ -1,5 +1,5 @@
 <template>
-  <div class="account">
+  <div class="container account">
     <BaseNavBar :title="title" :isBack="false"> </BaseNavBar>
 
     <div class="header">

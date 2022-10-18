@@ -22,7 +22,7 @@ module.exports = {
     'style-resources-loader': {
       preProcessor: 'less',
       patterns: [
-        resolve("src/global.less")
+        // resolve("src/global.less")
       ]
     }
   }

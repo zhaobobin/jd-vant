@@ -1,5 +1,5 @@
 <template>
-  <div class="manage-center">
+  <div class="container manage-center">
     <BaseNavBar :title="title"></BaseNavBar>
     <div class="manage-center-content">
       <div class="section">

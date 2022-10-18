@@ -1,7 +1,7 @@
 <template>
-  <div class="demand">
-    <BaseNavBar :title="title" :isBack="false"> </BaseNavBar>
-    需求大厅
+  <div class="container demand">
+    <SearchBar :search="search" />
+    <h1>需求大厅</h1>
     <div class="button" @click="onClick">按钮</div>
   </div>
 </template>
@@ -12,15 +12,17 @@ export default {
   data() {
     return {
       title: "需求大厅",
+      list: [
+        
+      ]
     };
   },
   methods: {
     onClick() {
-      console.log("点击按钮");
-      this.$router.push({ name: "List", params: { setid: 111222 } });
+      this.$router.push({ name: "MyOrder", params: { setid: 111222 } });
     },
-    created() {
-      console.log("模块2");
+    search(keyword) {
+      console.log(keyword);
     },
   },
 };
@@ -28,12 +30,12 @@ export default {
 
 <style lang="less">
 .demand {
-  width: auto;
-}
-.button {
-  margin-top: 20px;
-  width: 100%;
-  height: 50px;
-  background: palevioletred;
+  
+  .button {
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    background: palevioletred;
+  }
 }
 </style>

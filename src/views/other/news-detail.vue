@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container news-detail">
     <BaseNavBar :title="title"></BaseNavBar>
     <div>{{title}}</div>
   </div>
@@ -23,4 +23,8 @@ export default {
 };
 </script>
 
-<style lang="less"></style>
+<style lang="less">
+.news-detail {
+  
+}
+</style>

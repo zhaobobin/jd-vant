@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container cpertaor-manage">
     <BaseNavBar :title="title"></BaseNavBar>
     <div>{{title}}</div>
   </div>

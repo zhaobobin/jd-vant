@@ -3,12 +3,12 @@ import VueRouter from 'vue-router';
 import Main from '../views/root/main.vue';
 import Home from '../views/home/index.vue';
 import Demand from '../views/demand/index.vue';
+import MyOrder from '../views/demand/my-order.vue';
 import Account from '../views/account/index.vue';
 import ManageCenter from '../views/account/manage-center.vue';
 import CperatorManage from '../views/account/cperator-manage.vue';
 import MyCert from '../views/account/my-cert.vue';
 
-import DemoList from '../views/demand/DemoList';
 import NewsDetail from '../views/other/news-detail';
 import NotFound from '../views/root/NotFound.vue';
 
@@ -21,28 +21,53 @@ const routes = [
     path: '/home',
     name: 'Home',
     component: Home,
-    meta: { isShowTabBar: true },
+    meta: { isShowTabBar: true, viewMeta: 1 },
   },
   {
     path: '/demand',
     name: 'Demand',
     component: Demand,
-    meta: { isShowTabBar: true },
+    meta: { isShowTabBar: true, viewMeta: 1 },
   },
-  { path: '/demand/list', name: 'List', component: DemoList },
+  {
+    path: '/demand/order',
+    name: 'MyOrder',
+    component: MyOrder,
+    meta: { viewMeta: 1 },
+  },
 
   {
     path: '/account',
     name: 'Account',
     component: Account,
-    meta: { isShowTabBar: true },
+    meta: { isShowTabBar: true, viewMeta: 1 },
   },
-  { path: '/account/manage', name: 'ManageCenter', component: ManageCenter },
-  { path: '/account/manage/cperator', name: 'CperatorManage', component: CperatorManage },
-  { path: '/account/cert', name: 'MyCert', component: MyCert },
-  { path: '/news-detail', name: 'NewsDetail', component: NewsDetail },
+  {
+    path: '/account/manage',
+    name: 'ManageCenter',
+    component: ManageCenter,
+    meta: { viewMeta: 2 },
+  },
+  {
+    path: '/account/manage/cperator',
+    name: 'CperatorManage',
+    component: CperatorManage,
+    meta: { viewMeta: 3 },
+  },
+  {
+    path: '/account/cert',
+    name: 'MyCert',
+    component: MyCert,
+    meta: { viewMeta: 2 },
+  },
+  {
+    path: '/news-detail',
+    name: 'NewsDetail',
+    component: NewsDetail,
+    meta: { viewMeta: 2 },
+  },
 
-  { path: '*', name: 'NotFound', component: NotFound },
+  { path: '*', name: 'NotFound', component: NotFound, meta: { viewMeta: 2 } },
 ];
 
 const router = new VueRouter({

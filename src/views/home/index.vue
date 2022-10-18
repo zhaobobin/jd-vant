@@ -1,65 +1,62 @@
 <template>
-  <div class="home">
-    <div>
-      <BaseNavBar :title="title" :isBack="isBack"> </BaseNavBar>
-      <img src="../../assets/home/banner.png" alt="banner" class="banner">
+  <div class="container home">
+    <BaseNavBar :title="title" :isBack="isBack"> </BaseNavBar>
+    <img src="../../assets/home/banner.png" alt="banner" class="banner">
 
-      <div class="section basic-info">
-        <ul>
-          <li>
-            <p class="label">技能人才</p>
-            <p class="num">1000</p>
-            <van-button>看人才</van-button>
-          </li>
-          <li>
-            <p class="label">大师工作室</p>
-            <p class="num">38</p>
-            <van-button>看大师</van-button>
-          </li>
-          <li>
-            <p class="label">志愿团</p>
-            <p class="num">6</p>
-            <van-button>看志愿团</van-button>
-          </li>
-        </ul>
-      </div>
+    <div class="section basic-info">
+      <ul>
+        <li>
+          <p class="label">技能人才</p>
+          <p class="num">1000</p>
+          <van-button>看人才</van-button>
+        </li>
+        <li>
+          <p class="label">大师工作室</p>
+          <p class="num">38</p>
+          <van-button>看大师</van-button>
+        </li>
+        <li>
+          <p class="label">志愿团</p>
+          <p class="num">6</p>
+          <van-button>看志愿团</van-button>
+        </li>
+      </ul>
+    </div>
 
-      <div class="section notice">
-        <img src="../../assets/home/notice01.png" alt="notice">
-        <label for="">资讯快报</label>
-        <span>即时享上线啦！</span>
-      </div>
+    <div class="section notice">
+      <img src="../../assets/home/notice01.png" alt="notice">
+      <label for="">资讯快报</label>
+      <span>即时享上线啦！</span>
+    </div>
 
-      <div class="section important">
-        <h2>重要场景</h2>
-        <van-grid :border="false" icon-size="36">
-          <van-grid-item 
-            v-for="menu in menus"
-            :key="menu.key" 
-            :icon="menu.icon" 
-            :text="menu.name" 
-            @click="clickMenu(menu)"
-          />
-        </van-grid>
-      </div>
+    <div class="section important">
+      <h2>重要场景</h2>
+      <van-grid :border="false" icon-size="36">
+        <van-grid-item 
+          v-for="menu in menus"
+          :key="menu.key" 
+          :icon="menu.icon" 
+          :text="menu.name" 
+          @click="clickMenu(menu)"
+        />
+      </van-grid>
+    </div>
 
-      <div class="section news">
-        <h2>资讯&通知</h2>
-        <van-cell-group>
-          <van-cell 
-            v-for="item in news"
-            :key="item.id"
-            :icon="require('@/assets/home/notice02.png')"
-            :title="item.title"
-            :label="item.date"
-            is-link
-            center
-            size="large"
-            @click="clickNews(item)"
-          />
-        </van-cell-group>
-      </div>
-
+    <div class="section news">
+      <h2>资讯&通知</h2>
+      <van-cell-group>
+        <van-cell 
+          v-for="item in news"
+          :key="item.id"
+          :icon="require('@/assets/home/notice02.png')"
+          :title="item.title"
+          :label="item.date"
+          is-link
+          center
+          size="large"
+          @click="clickNews(item)"
+        />
+      </van-cell-group>
     </div>
   </div>
 </template>
