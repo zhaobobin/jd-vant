@@ -34,19 +34,6 @@
         @click="clickMenu(menu)"
       />
     </van-cell-group>
-    <!-- <ul>
-      <li 
-        v-for="menu in menus"
-        :key="menu.path"
-         class="menu-item-wrapper"
-      >
-        <div class="menu-item">
-          <span class="img"><img :src="menu.icon" :alt="menu.name"></span>
-          <span class="name">{{menu.name}}</span>
-          <van-icon name="arrow" size="20px" color="#b8c0cd" />
-        </div>
-      </li>
-    </ul> -->
   </div>
 </template>
 
@@ -151,48 +138,5 @@ export default {
     }
   }
 
-  // .menu-item-wrapper:last-child .menu-item::after {
-  //   background: none;
-  // }
-
-  // .menu-item {
-  //   display: flex;
-  //   align-items: center;
-  //   height: 58px;
-  //   background: #fff;
-  //   position: relative;
-
-  //   &::after {
-  //     content: '';
-  //     display: block;
-  //     height: 1px;
-  //     background: #EDEDED;
-  //     position: absolute;
-  //     left: 58px;
-  //     bottom: 0;
-  //     right: 0;
-  //   }
-
-  //   .img {
-  //     width: 58px;
-  //     display: flex;
-  //     align-items: center;
-  //     justify-content: center;
-  //     img {
-  //       width: 30px;
-  //       height: auto;
-  //     }
-  //   }
-  //   .name {
-  //     flex: 1;
-  //     font-size: 22px;
-  //   }
-  //   .van-icon {
-  //     position: absolute;
-  //     right: 10px;
-  //     top: 50%;
-  //     margin-top: -10px;
-  //   }
-  // }
 }
 </style>

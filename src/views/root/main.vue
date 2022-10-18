@@ -86,6 +86,7 @@ export default {
   height: 100vh;
   .container {
     padding-top: 46px;
+    background: #F1F2F3;
   }
 }
 </style>

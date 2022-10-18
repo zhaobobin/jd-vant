@@ -17,18 +17,34 @@ a {
   color: #428FFC;
 }
 
-.loan-go-enter-active, 
-.loan-go-leave-active, 
-.loan-back-enter-active, 
+p {
+  margin: 0;
+}
+
+.loan-go-enter-active,
+.loan-go-leave-active,
+.loan-back-enter-active,
 .loan-back-leave-active {
   transition: all 0.3s;
 }
-.loan-go-enter , .loan-back-leave-to{
+
+.loan-go-enter,
+.loan-back-leave-to {
   position: fixed;
   transform: translateX(100%);
 }
-.loan-back-enter , .loan-go-leave-to{
+
+.loan-back-enter,
+.loan-go-leave-to {
   position: fixed;
   transform: translateX(-100%);
 }
 
+.van-button--primary {
+  background-color: #428FFC;
+  border: 1px solid #428FFC;
+  &.van-button--plain {
+    color: #428FFC;
+    background: #fff;
+  }
+}
