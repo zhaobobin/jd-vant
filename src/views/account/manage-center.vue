@@ -51,21 +51,21 @@ export default {
       menus: [
         [
           { name: '操作员管理', key: 'CperatorManage', icon: require('@/assets/account/manage/manage_icon01.png') },
-          { name: '班级评价', key: 'ClassEvaluate', icon: require('@/assets/account/manage/manage_icon02.png') },
+          { name: '班级评价', key: '', icon: require('@/assets/account/manage/manage_icon02.png') },
         ],
         [
-          { name: '班级新增', key: 'ClassAdd', icon: require('@/assets/account/manage/manage_icon03.png') },
-          { name: '课程管理', key: 'CourseManage', icon: require('@/assets/account/manage/manage_icon04.png') },
-          { name: '设备管理', key: 'EquipmentManage', icon: require('@/assets/account/manage/manage_icon05.png') },
-          { name: '学员管理', key: 'StudentManage', icon: require('@/assets/account/manage/manage_icon06.png') },
+          { name: '班级新增', key: '', icon: require('@/assets/account/manage/manage_icon03.png') },
+          { name: '课程管理', key: '', icon: require('@/assets/account/manage/manage_icon04.png') },
+          { name: '设备管理', key: '', icon: require('@/assets/account/manage/manage_icon05.png') },
+          { name: '学员管理', key: '', icon: require('@/assets/account/manage/manage_icon06.png') },
         ],
         [
-          { name: '分团申请', key: 'DivisionApplication', icon: require('@/assets/account/manage/manage_icon07.png') },
-          { name: '分团长维护', key: 'DivisionHead', icon: require('@/assets/account/manage/manage_icon08.png') },
-          { name: '副团长维护', key: 'DeputyRegimental', icon: require('@/assets/account/manage/manage_icon09.png') },
-          { name: '入团审核', key: 'JoiningReview', icon: require('@/assets/account/manage/manage_icon10.png') },
-          { name: '移除团员', key: 'RemoveMember', icon: require('@/assets/account/manage/manage_icon11.png') },
-          { name: '邀请团员', key: 'InviteMember', icon: require('@/assets/account/manage/manage_icon12.png') },
+          { name: '分团申请', key: '', icon: require('@/assets/account/manage/manage_icon07.png') },
+          { name: '分团长维护', key: '', icon: require('@/assets/account/manage/manage_icon08.png') },
+          { name: '副团长维护', key: '', icon: require('@/assets/account/manage/manage_icon09.png') },
+          { name: '入团审核', key: '', icon: require('@/assets/account/manage/manage_icon10.png') },
+          { name: '移除团员', key: '', icon: require('@/assets/account/manage/manage_icon11.png') },
+          { name: '邀请团员', key: '', icon: require('@/assets/account/manage/manage_icon12.png') },
         ],
       ]
     };
@@ -77,8 +77,7 @@ export default {
   },
   methods: {
     clickMenu(menu) {
-      // console.log(menu)
-      this.$router.push({ name: menu.key, params: { title: menu.name } });
+      menu.key && this.$router.push({ name: menu.key, params: { title: menu.name } });
     }
   },
 };

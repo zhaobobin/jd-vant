@@ -52,7 +52,7 @@ export default {
         { name: '管理中心', key: 'ManageCenter', icon: require('@/assets/account/menu_icon01.png') },
         { name: '我的证书', key: 'MyCert', icon: require('@/assets/account/menu_icon02.png') },
         { name: '我的发布', key: 'MyPublish', icon: require('@/assets/account/menu_icon03.png') },
-        { name: '我的点单', key: 'MyOrder', icon: require('@/assets/account/menu_icon04.png') },
+        { name: '我的点单', key: 'MyOrderManage', icon: require('@/assets/account/menu_icon04.png') },
         { name: '我的揭榜', key: 'MyRecruited', icon: require('@/assets/account/menu_icon05.png') },
         { name: '我的培训', key: 'MyTrain', icon: require('@/assets/account/menu_icon06.png') },
         { name: '入驻申请', key: 'Apply', icon: require('@/assets/account/menu_icon07.png') },

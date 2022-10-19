@@ -4,10 +4,17 @@ import Main from '../views/root/main.vue';
 import Home from '../views/home/index.vue';
 import Demand from '../views/demand/index.vue';
 import MyOrder from '../views/demand/my-order.vue';
+
 import Account from '../views/account/index.vue';
 import ManageCenter from '../views/account/manage-center.vue';
-import CperatorManage from '../views/account/cperator-manage.vue';
 import MyCert from '../views/account/my-cert.vue';
+import MyPublish from '../views/account/my-publish.vue';
+import MyOrderManage from '../views/account/my-order-manage.vue';
+import MyRecruited from '../views/account/my-recruited.vue';
+import MyTrain from '../views/account/my-train.vue';
+import Apply from '../views/account/apply.vue';
+
+import CperatorManage from '../views/account/cperator-manage.vue';
 
 import NewsDetail from '../views/other/news-detail';
 import NotFound from '../views/root/NotFound.vue';
@@ -49,17 +56,49 @@ const routes = [
     meta: { viewMeta: 2 },
   },
   {
-    path: '/account/manage/cperator',
-    name: 'CperatorManage',
-    component: CperatorManage,
-    meta: { viewMeta: 3 },
-  },
-  {
     path: '/account/cert',
     name: 'MyCert',
     component: MyCert,
     meta: { viewMeta: 2 },
   },
+  {
+    path: '/account/publish',
+    name: 'MyPublish',
+    component: MyPublish,
+    meta: { viewMeta: 2 },
+  },
+  {
+    path: '/account/order-manage',
+    name: 'MyOrderManage',
+    component: MyOrderManage,
+    meta: { viewMeta: 2 },
+  },
+  {
+    path: '/account/recruited',
+    name: 'MyRecruited',
+    component: MyRecruited,
+    meta: { viewMeta: 2 },
+  },
+  {
+    path: '/account/train',
+    name: 'MyTrain',
+    component: MyTrain,
+    meta: { viewMeta: 2 },
+  },
+  {
+    path: '/account/apply',
+    name: 'Apply',
+    component: Apply,
+    meta: { viewMeta: 2 },
+  },
+
+  {
+    path: '/account/manage/cperator',
+    name: 'CperatorManage',
+    component: CperatorManage,
+    meta: { viewMeta: 3 },
+  },
+
   {
     path: '/news-detail',
     name: 'NewsDetail',

@@ -9,6 +9,8 @@ import { Grid, GridItem } from 'vant';
 import { Search } from 'vant';
 import { Tab, Tabs } from 'vant';
 import { Empty } from 'vant';
+import { List } from 'vant';
+import { PullRefresh } from 'vant';
 
 Vue.use(Col);
 Vue.use(Row);
@@ -25,3 +27,5 @@ Vue.use(Search);
 Vue.use(Tab);
 Vue.use(Tabs);
 Vue.use(Empty);
+Vue.use(List);
+Vue.use(PullRefresh);
