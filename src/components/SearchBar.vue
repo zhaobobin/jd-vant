@@ -11,6 +11,7 @@
       :clearable="false"
       @search="search(keyword)"
     />
+    <div class="right"></div>
   </div>
 </template>
 
@@ -65,9 +66,15 @@ export default {
     }
   }
 
+  .right {
+    width: 66px;
+    height: 100%;
+  }
+
   .van-search {
     padding: 0;
-    width: 240px;
+    margin: 0 auto;
+    width: 64%;
     .van-cell {
       padding: 4px 8px 4px 0;
     }
